@@ -1,0 +1,11 @@
+#!name=Proxy Process Watch
+#!desc=显示 Surge 最近/当前连接里的进程占比，辅助观察 curl、mihomo、Chrome、Telegram 等进程流量。
+#!category=Panel
+#!arguments=TITLE:Process Watch,ICON:chart.bar,COLOR:#5E5CE6,LIMIT:6
+#!arguments-desc=[参数设置]\n\nTITLE: 面板标题。\n\nICON/COLOR: 面板图标与颜色。\n\nLIMIT: 显示前几个进程。
+
+[Panel]
+Proxy Process Watch = script-name=Proxy Process Watch Panel,update-interval=5
+
+[Script]
+Proxy Process Watch Panel = type=generic,timeout=10,script-path=https://raw.githubusercontent.com/itworksig/Surge-Modules/main/proxy-process-watch-panel/proxy-process-watch-panel.js,argument=title={{{TITLE}}}&icon={{{ICON}}}&color={{{COLOR}}}&limit={{{LIMIT}}}
