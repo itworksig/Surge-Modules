@@ -1,0 +1,11 @@
+#!name=Proxy IP Panel
+#!desc=强制通过指定 Surge 策略/策略组查询代理出口 IP，避免规则分流模式下显示本机原始 IP。
+#!category=Panel
+#!arguments=POLICY:♻️ 手动切换,TITLE:Proxy IP,ICON:network,COLOR:#34C759
+#!arguments-desc=[参数设置]\n\nPOLICY: 要强制使用的策略或策略组名称，例如 Proxy、GLOBAL、节点选择。\n\nTITLE: 面板标题。\n\nICON/COLOR: 面板图标与颜色。
+
+[Panel]
+Proxy IP = script-name=Proxy IP Panel,update-interval=60
+
+[Script]
+Proxy IP Panel = type=generic,timeout=10,script-path=https://raw.githubusercontent.com/YOUR_GITHUB_USERNAME/surge-proxy-ip-panel/main/proxy-ip-panel.js,argument=policy={{{POLICY}}}&title={{{TITLE}}}&icon={{{ICON}}}&color={{{COLOR}}}
