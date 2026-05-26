@@ -8,4 +8,4 @@
 Proxy IP = script-name=Proxy IP Panel,update-interval=60
 
 [Script]
-Proxy IP Panel = type=generic,timeout=10,script-path=https://raw.githubusercontent.com/YOUR_GITHUB_USERNAME/surge-proxy-ip-panel/main/proxy-ip-panel.js,argument=policy={{{POLICY}}}&title={{{TITLE}}}&icon={{{ICON}}}&color={{{COLOR}}}
+Proxy IP Panel = type=generic,timeout=10,script-path=https://raw.githubusercontent.com/itworksig/surge-proxy-ip-panel/main/proxy-ip-panel.js,argument=policy={{{POLICY}}}&title={{{TITLE}}}&icon={{{ICON}}}&color={{{COLOR}}}
