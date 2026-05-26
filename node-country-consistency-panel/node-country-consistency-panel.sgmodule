@@ -1,0 +1,11 @@
+#!name=Node Country Consistency
+#!desc=检查策略组当前选中节点名称与真实出口国家/地区是否一致。
+#!category=Panel
+#!arguments=GROUP:♻️ 手动切换,TITLE:Node Country,ICON:location,COLOR:#FFCC00
+#!arguments-desc=[参数设置]\n\nGROUP: 要检查的 Surge select 策略组名称，必须完全一致。\n\nTITLE: 面板标题。\n\nICON/COLOR: 面板图标与颜色。
+
+[Panel]
+Node Country = script-name=Node Country Consistency Panel,update-interval=120
+
+[Script]
+Node Country Consistency Panel = type=generic,timeout=20,script-path=https://raw.githubusercontent.com/itworksig/Surge-Modules/main/node-country-consistency-panel/node-country-consistency-panel.js,argument=group={{{GROUP}}}&title={{{TITLE}}}&icon={{{ICON}}}&color={{{COLOR}}}
