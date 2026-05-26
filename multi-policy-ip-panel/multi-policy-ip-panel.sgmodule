@@ -1,0 +1,11 @@
+#!name=Multi Policy IP Panel
+#!desc=同时查看多个 Surge 策略/策略组的真实出口 IP，强制绕过规则分流。
+#!category=Panel
+#!arguments=POLICIES:♻️ 手动切换,🧲 OpenAI,🎬 Netflix,DIRECT,TITLE:Policy IPs,ICON:network,COLOR:#34C759
+#!arguments-desc=[参数设置]\n\nPOLICIES: 逗号分隔的 Surge 策略或策略组名称，必须完全一致，包括 emoji 和空格。\n\nTITLE: 面板标题。\n\nICON/COLOR: 面板图标与颜色。
+
+[Panel]
+Multi Policy IP = script-name=Multi Policy IP Panel,update-interval=120
+
+[Script]
+Multi Policy IP Panel = type=generic,timeout=30,script-path=https://raw.githubusercontent.com/itworksig/Surge-Modules/main/multi-policy-ip-panel/multi-policy-ip-panel.js,argument=policies={{{POLICIES}}}&title={{{TITLE}}}&icon={{{ICON}}}&color={{{COLOR}}}
